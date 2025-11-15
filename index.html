@@ -1,21 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheetal • Coming Soon</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheetal – Wanderess</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&family=Gochi+Hand&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    background: #f8f4ef;
+    color: #5c4834;
+    font-family: 'Patrick Hand', cursive;
+    overflow-x: hidden;
+  }
+
+  /* Doodle Classes */
+  .doodle-star { font-size: 2.5rem; position: absolute; animation: float 4s infinite ease-in-out; }
+  .d1 { top: 40px; left: 20px; transform: rotate(-15deg); }
+  .d2 { top: 150px; right: 40px; transform: rotate(10deg); }
+  .d3 { bottom: 40px; left: 60px; transform: rotate(20deg); }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #f1e6d9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px dashed #c8b8a6;
+    font-size: 1.3rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #5c4834;
+    margin: 0 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  nav a:hover {
+    opacity: 0.7;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 130px 20px 90px;
+    background-image: url('https://i.ibb.co/5sHsYV4/boho-bg.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero h1 {
+    font-size: 4.5rem;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 3px;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    opacity: 0.8;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+    100% { transform: translateY(0) }
+  }
+
+  /* Section Styles */
+  section {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+    border-top: 2px dashed #d6c4b2;
+  }
+
+  section h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+  }
+
+  section p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+
+  /* About */
+  .about-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .about-grid img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px dashed #c8b8a6;
+    animation: fadeIn 2s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Project Cards */
+  .card {
+    background: #fffaf5;
+    padding: 25px;
+    border: 2px dashed #d8c8b8;
+    margin: 20px 0;
+    border-radius: 12px;
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px dashed #d8c8b8;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 35px;
+    background: #f1e6d9;
+    border-top: 2px dashed #c8b8a6;
+    font-size: 1.2rem;
+  }
+</style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1 class="title">sheetal</h1>
-    <p class="subtitle">something magical is coming ✨</p>
+<!-- Floating Doodles -->
+<div class="doodle-star d1">✦</div>
+<div class="doodle-star d2">✨</div>
+<div class="doodle-star d3">✧</div>
 
-    <div class="loader"></div>
+<!-- Navbar -->
+<nav>
+  <div style="font-family: 'Gochi Hand', cursive; font-size:1.8rem;">🌼 Sheetal</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-    <p class="footer">crafted with ♡ by sheetu</p>
-</div>
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>Hey, I'm Sheetal</h1>
+  <p>a wanderess soul sketching magic into life 🌙✨</p>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="about-grid">
+    <img src="https://i.ibb.co/4F9fZf5/placeholder-boho.png">
+    <div>
+      <h2>About Me 🕊️</h2>
+      <p>Spiritually chaotic, aesthetically boho, emotionally tender,  
+         an INFP wanderess rewriting her story in doodles & data ✨</p>
+      <p>Learning, healing, building, dreaming — welcome to my tiny corner.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects ✨</h2>
+  <div class="card">
+    <h3>✨ Project 1 — Data Analytics Dashboard</h3>
+    <p>A beginner-friendly visual analytics dash with FastAPI & MySQL.</p>
+  </div>
+  <div class="card">
+    <h3>🌿 Project 2 — Boho Portfolio</h3>
+    <p>This exact cute website you’re seeing right now.</p>
+  </div>
+</section>
+
+<!-- Blog -->
+<section id="blog">
+  <h2>Blog ✏️</h2>
+  <p>Your sketchnote thoughts, spiritual rambles, healing notes — coming soon.</p>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <h2>Gallery 📸</h2>
+  <div class="gallery">
+    <img src="https://i.ibb.co/HTMh0Wk/boho1.jpg">
+    <img src="https://i.ibb.co/jgYBtTS/boho2.jpg">
+    <img src="https://i.ibb.co/kQG9Qhg/boho3.jpg">
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact 🤎</h2>
+  <p>sliding into my DMs is highly encouraged:  
+     <br>📩 <b>your-email-here</b></p>
+</section>
+
+<footer>Made with chai, music, & a sprinkle of Sheetal magic ✨</footer>
 
 </body>
 </html>
