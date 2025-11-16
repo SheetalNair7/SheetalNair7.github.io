@@ -3,230 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheetal – Wanderess</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&family=Gochi+Hand&display=swap" rel="stylesheet">
-
+<title>Sheetal’s Transformational Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  body {
-    margin: 0;
-    background: #f8f4ef;
-    color: #5c4834;
-    font-family: 'Patrick Hand', cursive;
-    overflow-x: hidden;
-  }
+  /* ---- Reset & Fonts ---- */
+  body, html { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf5f0; color: #222; scroll-behavior: smooth; }
+  h1, h2 { font-family: 'Playfair Display', serif; margin: 0; }
+  a { text-decoration: none; }
 
-  /* Doodle Classes */
-  .doodle-star { font-size: 2.5rem; position: absolute; animation: float 4s infinite ease-in-out; }
-  .d1 { top: 40px; left: 20px; transform: rotate(-15deg); }
-  .d2 { top: 150px; right: 40px; transform: rotate(10deg); }
-  .d3 { bottom: 40px; left: 60px; transform: rotate(20deg); }
-
-  /* Navbar */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #f1e6d9;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 2px dashed #c8b8a6;
-    font-size: 1.3rem;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #5c4834;
-    margin: 0 15px;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-
-  nav a:hover {
-    opacity: 0.7;
-  }
-
-  /* Hero */
+  /* ---- Hero Section ---- */
   .hero {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 130px 20px 90px;
-    background-image: url('C:\Users\hp\Downloads\download (63).jpeg');
-    background-size: cover;
-    background-position: center;
+    padding: 0 20px;
+    overflow: hidden;
+    position: relative;
   }
   .hero h1 {
-    font-size: 4.5rem;
-    font-family: 'Amatic SC', cursive;
-    letter-spacing: 3px;
+    font-size: 3rem;
+    color: #5c3c1a;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlideIn 1s forwards 0.3s;
   }
   .hero p {
-    font-size: 1.4rem;
-    opacity: 0.8;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0) }
-    50% { transform: translateY(-10px) }
-    100% { transform: translateY(0) }
-  }
-
-  /* Section Styles */
-  section {
-    padding: 80px 40px;
-    max-width: 1000px;
-    margin: auto;
-    border-top: 2px dashed #d6c4b2;
-  }
-
-  section h2 {
-    font-family: 'Amatic SC', cursive;
-    font-size: 3.2rem;
-    margin-bottom: 10px;
-  }
-
-  section p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    opacity: 0.9;
-  }
-
-  /* About */
-  .about-grid {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .about-grid img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px dashed #c8b8a6;
-    animation: fadeIn 2s;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Project Cards */
-  .card {
-    background: #fffaf5;
-    padding: 25px;
-    border: 2px dashed #d8c8b8;
-    margin: 20px 0;
-    border-radius: 12px;
-    transition: 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Gallery */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  .gallery img {
-    width: 100%;
-    border-radius: 12px;
-    border: 3px dashed #d8c8b8;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 35px;
-    background: #f1e6d9;
-    border-top: 2px dashed #c8b8a6;
     font-size: 1.2rem;
+    color: #5c3c1a;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlideIn 1s forwards 0.6s;
+  }
+  @keyframes fadeSlideIn {
+    to { opacity:1; transform: translateY(0); }
+  }
+
+  /* ---- Services Accordion ---- */
+  .accordion { 
+    background-color: #fff; 
+    color: #5c3c1a; 
+    cursor: pointer; 
+    padding: 18px; 
+    width: 100%; 
+    border: none; 
+    text-align: left; 
+    border-radius: 12px; 
+    outline: none; 
+    transition: all 0.4s ease; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  .accordion::after {
+    content: '+';
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease;
+  }
+  .accordion.active::after {
+    transform: rotate(45deg);
+  }
+  .panel {
+    padding: 0 20px;
+    display: none;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .panel p { margin: 15px 0; font-size: 1rem; }
+  .panel a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background: #ff7e5f;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  .panel a:hover { background: #eb5f3c; transform: translateY(-2px); }
+
+  /* ---- Reviews ---- */
+  #reviews { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+  #reviews h2 { text-align:center; margin-bottom: 20px; font-size:2rem; opacity:0; transform:translateY(30px); animation: fadeSlideIn 1s forwards 0.8s; }
+  .reviews-container {
+    background:#fff7f0; padding:20px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.05);
+  }
+  .reviews-container blockquote {
+    margin: 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid #ff7e5f;
+    font-style: italic;
+    color: #555;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  .reviews-container blockquote.visible { opacity:1; transform:translateY(0); }
+
+  /* ---- Form Section ---- */
+  iframe { width: 100%; border: none; border-radius: 12px; margin-top: 15px; }
+
+  /* ---- Animation: fade in accordion on scroll ---- */
+  .accordion.visible { opacity:1; transform:translateX(0); transition: all 0.6s ease-out; }
+
+  /* ---- Responsive ---- */
+  @media(max-width: 768px){
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
   }
 </style>
 </head>
-
 <body>
 
-<!-- Floating Doodles -->
-<div class="doodle-star d1">✦</div>
-<div class="doodle-star d2">✨</div>
-<div class="doodle-star d3">✧</div>
-
-<!-- Navbar -->
-<nav>
-  <div style="font-family: 'Gochi Hand', cursive; font-size:1.8rem;">🌼 Sheetal</div>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
 <!-- Hero -->
-<section id="home" class="hero">
-  <h1>Hey, I'm Sheetal</h1>
-  <p>a wanderess soul sketching magic into life 🌙✨</p>
+<section class="hero">
+  <h1>Step Into Your Transformation</h1>
+  <p>Curated energy healing and soul guidance sessions designed to align, awaken, and empower.</p>
 </section>
 
-<!-- About -->
-<section id="about">
-  <div class="about-grid">
-    <img src="https://i.ibb.co/4F9fZf5/placeholder-boho.png">
-    <div>
-      <h2>About Me 🕊️</h2>
-      <p>Spiritually chaotic, aesthetically boho, emotionally tender,  
-         an INFP wanderess rewriting her story in doodles & data ✨</p>
-      <p>Learning, healing, building, dreaming — welcome to my tiny corner.</p>
-    </div>
+<!-- Services -->
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+
+  <!-- Service 1 -->
+  <button class="accordion">Energy Healing Session</button>
+  <div class="panel">
+    <p>60-minute personalized session to realign your energy, release blockages, and restore clarity.</p>
+    <p>Price: ₹1000</p>
+    <a href="https://pay.google.com/yourupi" target="_blank">Pay via PhonePe</a>
+  </div>
+
+  <!-- Service 2 -->
+  <button class="accordion">Akashic Record Reading</button>
+  <div class="panel">
+    <p>Discover your soul’s blueprint and life path in a 45-minute reading that awakens your inner knowing.</p>
+    <p>Price: ₹1500</p>
+    <a href="https://pay.google.com/yourupi" target="_blank">Pay via PhonePe</a>
+  </div>
+
+  <!-- Booking Form -->
+  <button class="accordion">Book Your Session</button>
+  <div class="panel">
+    <p>Fill out the form to request your preferred time slot. After submitting, pay via the UPI link above.</p>
+    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" height="600">Loading…</iframe>
+  </div>
+
+</div>
+
+<!-- Client Reviews Section -->
+<section id="reviews">
+  <h2>What Clients Say</h2>
+  <div class="reviews-container">
+    <blockquote>"Sheetal’s energy healing transformed my week!" – Priya</blockquote>
+    <blockquote>"Insightful Akashic reading. Felt empowered." – Rahul</blockquote>
+    <blockquote>"Professional, kind, and deeply intuitive." – Ananya</blockquote>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects">
-  <h2>Projects ✨</h2>
-  <div class="card">
-    <h3>✨ Project 1 — Data Analytics Dashboard</h3>
-    <p>A beginner-friendly visual analytics dash with FastAPI & MySQL.</p>
-  </div>
-  <div class="card">
-    <h3>🌿 Project 2 — Boho Portfolio</h3>
-    <p>This exact cute website you’re seeing right now.</p>
-  </div>
-</section>
+<script>
+  // Accordion JS
+  var acc = document.getElementsByClassName("accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    }
+  }
 
-<!-- Blog -->
-<section id="blog">
-  <h2>Blog ✏️</h2>
-  <p>Your sketchnote thoughts, spiritual rambles, healing notes — coming soon.</p>
-</section>
+  // Animate accordions on scroll
+  function animateAccordions() {
+    var accs = document.querySelectorAll('.accordion');
+    accs.forEach(function(a) {
+      var top = a.getBoundingClientRect().top;
+      if(top < window.innerHeight - 50) { a.classList.add('visible'); }
+    });
+  }
+  window.addEventListener('scroll', animateAccordions);
+  window.addEventListener('load', animateAccordions);
 
-<!-- Gallery -->
-<section id="gallery">
-  <h2>Gallery 📸</h2>
-  <div class="gallery">
-    <img src="https://i.ibb.co/HTMh0Wk/boho1.jpg">
-    <img src="https://i.ibb.co/jgYBtTS/boho2.jpg">
-    <img src="https://i.ibb.co/kQG9Qhg/boho3.jpg">
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact 🤎</h2>
-  <p>sliding into my DMs is highly encouraged:  
-     <br>📩 <b>https://sheetalnair7.github.io/sheetal.github.io</b></p>
-</section>
-
-<footer>Made with chai, music, & a sprinkle of Sheetal magic ✨</footer>
+  // Reviews scroll animation
+  window.addEventListener('scroll', function() {
+    var quotes = document.querySelectorAll('.reviews-container blockquote');
+    quotes.forEach(function(q) {
+      var top = q.getBoundingClientRect().top;
+      if(top < window.innerHeight - 50) { q.classList.add('visible'); }
+    });
+  });
+</script>
 
 </body>
 </html>
