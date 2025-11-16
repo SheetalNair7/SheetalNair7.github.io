@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Energy Healing Session",
+    "description": "60-minute personalized session to realign your energy, release blockages, and restore clarity.",
+    "price": "₹1000",
+    "paymentLink": "https://pay.google.com/yourupi"
+  },
+  {
+    "title": "Akashic Record Reading",
+    "description": "Discover your soul’s blueprint and life path in a 45-minute reading that awakens your inner knowing.",
+    "price": "₹1500",
+    "paymentLink": "https://pay.google.com/yourupi"
+  },
+  {
+    "title": "Personalized Coaching Call",
+    "description": "30-minute one-on-one guidance session to clarify your path and take aligned action.",
+    "price": "₹800",
+    "paymentLink": "https://pay.google.com/yourupi"
+  }
+]
