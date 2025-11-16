@@ -132,5 +132,43 @@
     <p>email coming soon ✧</p>
   </section>
 
+  <!-- Services Section -->
+  <section id="services" class="section fade-in">
+    <h2 class="section-title">Services</h2>
+    <p>Check out my offerings below:</p>
+    <ul id="services-list" class="services-list"></ul>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="section fade-in">
+    <h2 class="section-title">Client Love</h2>
+    <div class="reviews-grid">
+      <img src="images/review1.png" alt="Review 1" />
+      <img src="images/review2.png" alt="Review 2" />
+      <img src="images/review3.png" alt="Review 3" />
+    </div>
+  </section>
+
+  <!-- Google Form Section -->
+  <section id="contact" class="section fade-in">
+    <h2 class="section-title">Work With Me</h2>
+    <p>Fill the form below and I’ll get back to you 💛</p>
+    <iframe src="YOUR_GOOGLE_FORM_URL_HERE" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </section>
+
+  <script>
+    // Load Services from services.json
+    fetch('services.json')
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('services-list');
+        data.services.forEach(service => {
+          const item = document.createElement('li');
+          item.innerHTML = `<a href="${service.link}" target="_blank">${service.name}</a>`;
+          list.appendChild(item);
+        });
+      })
+      .catch(error => console.error('Error loading services:', error));
+  </script>
 </body>
 </html>
