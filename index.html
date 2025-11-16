@@ -1,247 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheetal’s Transformational Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  /* ---- Reset & Fonts ---- */
-  body, html { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf5f0; color: #222; scroll-behavior: smooth; }
-  h1, h2 { font-family: 'Playfair Display', serif; margin: 0; }
-  a { text-decoration: none; }
-
-  /* ---- Hero Section ---- */
-  .hero {
-    background: linear-gradient(135deg, #ffecd2, #fcb69f);
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden;
-    position: relative;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    color: #5c3c1a;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeSlideIn 1s forwards 0.3s;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    color: #5c3c1a;
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeSlideIn 1s forwards 0.6s;
-  }
-  @keyframes fadeSlideIn {
-    to { opacity:1; transform: translateY(0); }
-  }
-
-  /* ---- Services Accordion ---- */
-  .accordion { 
-    background-color: #fff; 
-    color: #5c3c1a; 
-    cursor: pointer; 
-    padding: 18px; 
-    width: 100%; 
-    border: none; 
-    text-align: left; 
-    border-radius: 12px; 
-    outline: none; 
-    transition: all 0.4s ease; 
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    position: relative;
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  .accordion::after {
-    content: '+';
-    font-size: 1.5rem;
-    position: absolute;
-    right: 20px;
-    transition: transform 0.3s ease;
-  }
-  .accordion.active::after {
-    transform: rotate(45deg);
-  }
-  .panel {
-    padding: 0 20px;
-    display: none;
-    background-color: #fff;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  .panel p { margin: 15px 0; font-size: 1rem; }
-  .panel a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 22px;
-    background: #ff7e5f;<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheetal’s Transformational Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<!-- Hero -->
-<section class="hero">
-  <h1>Step Into Your Transformation</h1>
-  <p>Curated energy healing and soul guidance sessions designed to align, awaken, and empower.</p>
-</section>
-
-<!-- Services -->
-<div id="services-container" style="max-width:900px; margin:40px auto; padding:0 20px;"></div>
-
-<!-- Booking Form -->
-<div style="max-width:900px; margin:0 auto 40px auto; padding:0 20px;">
-  <h2 style="text-align:center; margin-bottom:20px;">Book Your Session</h2>
-  <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" height="600">Loading…</iframe>
-</div>
-
-<!-- Client Reviews -->
-<section id="reviews">
-  <h2>What Clients Say</h2>
-  <div class="reviews-container">
-    <img src="images/reviews/review1.png" alt="Client Review 1">
-    <img src="images/reviews/review2.png" alt="Client Review 2">
-    <img src="images/reviews/review3.png" alt="Client Review 3">
-  </div>
-</section>
-
-<script src="js/main.js"></script>
-</body>
-</html>
-
-    color: white;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-  }
-  .panel a:hover { background: #eb5f3c; transform: translateY(-2px); }
-
-  /* ---- Reviews ---- */
-  #reviews { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-  #reviews h2 { text-align:center; margin-bottom: 20px; font-size:2rem; opacity:0; transform:translateY(30px); animation: fadeSlideIn 1s forwards 0.8s; }
-  .reviews-container {
-    background:#fff7f0; padding:20px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.05);
-  }
-  .reviews-container blockquote {
-    margin: 15px 0;
-    padding-left: 15px;
-    border-left: 3px solid #ff7e5f;
-    font-style: italic;
-    color: #555;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-  }
-  .reviews-container blockquote.visible { opacity:1; transform:translateY(0); }
-
-  /* ---- Form Section ---- */
-  iframe { width: 100%; border: none; border-radius: 12px; margin-top: 15px; }
-
-  /* ---- Animation: fade in accordion on scroll ---- */
-  .accordion.visible { opacity:1; transform:translateX(0); transition: all 0.6s ease-out; }
-
-  /* ---- Responsive ---- */
-  @media(max-width: 768px){
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 1rem; }
-  }
-</style>
-</head>
-<body>
-
-<!-- Hero -->
-<section class="hero">
-  <h1>Step Into Your Transformation</h1>
-  <p>Curated energy healing and soul guidance sessions designed to align, awaken, and empower.</p>
-</section>
-
-<!-- Services -->
-<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-
-  <!-- Service 1 -->
-  <button class="accordion">Energy Healing Session</button>
-  <div class="panel">
-    <p>60-minute personalized session to realign your energy, release blockages, and restore clarity.</p>
-    <p>Price: ₹1000</p>
-    <a href="https://pay.google.com/yourupi" target="_blank">Pay via PhonePe</a>
-  </div>
-
-  <!-- Service 2 -->
-  <button class="accordion">Akashic Record Reading</button>
-  <div class="panel">
-    <p>Discover your soul’s blueprint and life path in a 45-minute reading that awakens your inner knowing.</p>
-    <p>Price: ₹1500</p>
-    <a href="https://pay.google.com/yourupi" target="_blank">Pay via PhonePe</a>
-  </div>
-
-  <!-- Booking Form -->
-  <button class="accordion">Book Your Session</button>
-  <div class="panel">
-    <p>Fill out the form to request your preferred time slot. After submitting, pay via the UPI link above.</p>
-    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" height="600">Loading…</iframe>
-  </div>
-
-</div>
-
-<!-- Client Reviews Section -->
-<section id="reviews">
-  <h2>What Clients Say</h2>
-  <div class="reviews-container">
-    <blockquote>"Sheetal’s energy healing transformed my week!" – Priya</blockquote>
-    <blockquote>"Insightful Akashic reading. Felt empowered." – Rahul</blockquote>
-    <blockquote>"Professional, kind, and deeply intuitive." – Ananya</blockquote>
-  </div>
-</section>
-
-<script>
-  // Accordion JS
-  var acc = document.getElementsByClassName("accordion");
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sheetal • boho sketchnote</title>
+  <link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Gaegu&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fffaf3;
+      font-family: "Gaegu", sans-serif;
+      color: #3a2f2f;
     }
-  }
 
-  // Animate accordions on scroll
-  function animateAccordions() {
-    var accs = document.querySelectorAll('.accordion');
-    accs.forEach(function(a) {
-      var top = a.getBoundingClientRect().top;
-      if(top < window.innerHeight - 50) { a.classList.add('visible'); }
-    });
-  }
-  window.addEventListener('scroll', animateAccordions);
-  window.addEventListener('load', animateAccordions);
+    /* Notepaper frame */
+    .frame {
+      border: 3px dashed #c9a27a;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      background: #fffdf8;
+      box-shadow: 4px 4px 0px #d9c3a0;
+    }
 
-  // Reviews scroll animation
-  window.addEventListener('scroll', function() {
-    var quotes = document.querySelectorAll('.reviews-container blockquote');
-    quotes.forEach(function(q) {
-      var top = q.getBoundingClientRect().top;
-      if(top < window.innerHeight - 50) { q.classList.add('visible'); }
-    });
-  });
-</script>
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      border-bottom: 2px dashed #dabfa5;
+      background: #fffaf4;
+    }
+
+    nav .logo {
+      font-family: "Fredericka the Great", cursive;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #5a4a42;
+      font-size: 1.1rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-family: "Butterfly Kids", cursive;
+    }
+
+    .coming-soon {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+
+    /* Doodles */
+    .doodles {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .doodles img {
+      width: 90px;
+      height: auto;
+      opacity: 0.85;
+    }
+
+    /* Sections */
+    section {
+      margin: 40px;
+    }
+
+    h2 {
+      font-family: "Fredericka the Great";
+      font-size: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">sheetal</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="frame hero">
+    <h1>hi, i'm sheetal 💛</h1>
+    <p class="coming-soon">✨ my boho site is coming soon ✨</p>
+
+    <div class="doodles">
+      <img src="images/moon.png" alt="moon doodle" />
+      <img src="images/heart.png" alt="heart doodle" />
+      <img src="images/star.png" alt="star doodle" />
+    </div>
+  </div>
+
+  <section id="about" class="frame">
+    <h2>about me</h2>
+    <p>dreamer. creator. wanderess. sketchnote lover. 🌙✨</p>
+  </section>
+
+  <section id="work" class="frame">
+    <h2>my work</h2>
+    <p>data • art • healing • storytelling</p>
+  </section>
+
+  <section id="contact" class="frame">
+    <h2>contact</h2>
+    <p>email coming soon ✧</p>
+  </section>
 
 </body>
 </html>

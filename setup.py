@@ -1,15 +1,15 @@
 import os
 
 # Folder structure
-folders = [
-    "css",
-    "js",
-    "data",
-    "images/reviews"
-]
+# folders = [
+#     "css",
+#     "js",
+#     "data",
+#     "images/reviews"
+# ]
 
-for f in folders:
-    os.makedirs(f, exist_ok=True)
+# for f in folders:
+#     os.makedirs(f, exist_ok=True)
 
 print("Folders created!")
 
@@ -103,7 +103,7 @@ function activateAccordions() {
 }
 """
 
-with open("js/main.js", "w", encoding="utf-8") as f:
+with open("project_pages/js/main.js", "w", encoding="utf-8") as f:
     f.write(main_js)
 
 print("main.js created!")
@@ -126,7 +126,7 @@ services_json = """
 ]
 """
 
-with open("data/services.json", "w", encoding="utf-8") as f:
+with open("project_pages/data/services.json", "w", encoding="utf-8") as f:
     f.write(services_json)
 
 print("services.json created!")
@@ -140,7 +140,7 @@ reviews_json = """
 ]
 """
 
-with open("data/reviews.json", "w", encoding="utf-8") as f:
+with open("project_pages/data/reviews.json", "w", encoding="utf-8") as f:
     f.write(reviews_json)
 
 print("reviews.json created!")
