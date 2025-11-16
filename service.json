@@ -1,4 +1,4 @@
-[
+{services:[
   {
     "name": "Energy Healing Session",
     "description": "60-minute personalized session to realign your energy, release blockages, and restore clarity.",
@@ -24,3 +24,4 @@
     "link": "https://pay.google.com/yourupi"
   }
 ]
+}

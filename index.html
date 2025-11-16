@@ -153,7 +153,8 @@
   <section id="contact" class="section fade-in">
     <h2 class="section-title">Work With Me</h2>
     <p>Fill the form below and I’ll get back to you 💛</p>
-    <iframe src="YOUR_GOOGLE_FORM_URL_HERE" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdtSWYORNzEJtGlIlAcAECe94KDy1xoHOkG7cwExvouakdcvw/viewform?embedded=true" width="640" height="559" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <!-- <iframe src="YOUR_GOOGLE_FORM_URL_HERE" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>-->
   </section>
 
   <script>
@@ -161,7 +162,7 @@
     fetch('services.json')
       .then(response => response.json())
       .then(data => {
-        const list = document.getElementById('services-list');
+        const list = document.getElementById('services');
         data.services.forEach(service => {
           const item = document.createElement('li');
           item.innerHTML = `<a href="${service.link}" target="_blank">${service.name}</a>`;
